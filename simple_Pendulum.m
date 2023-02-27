@@ -30,23 +30,9 @@ sys = add_joint_revolute(sys, "pivot", "pendulum", [0;0], [L;0]);
 tf=2.0;
 
 
-% q0 = initial_coordinates(sys);
-% qd0 = zeros(size(q0));
-% accfun = @(u, v, t)acceleration(sys, u, v, t);
-% h = 0.001;
-% [t2, Q, Qp] = EulerCromer(accfun, tf, q0, qd0, h);
-% % 
-% plot(t2, Q(:, 5), '--')
-% % legend('reference', 'theta of the pendulum')
-% 
-
-
 
 % Solve dynamics
 [T, Q] = solve_dynamics_ode45(sys);
-
-% % Calculate velocity
-% V = calculate_velocity(sys, Q);
 
 % Plot results
 figure;
