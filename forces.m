@@ -8,7 +8,7 @@ f = zeros(3 * length(sys.bodies), 1);
 
 for ii = 1:length(sys.bodies)
     f(body_idx(ii)) = [sys.bodies(ii).mass * sys.gravity; 
-        0]+sys.bodies(ii).forces
+        0]+sys.bodies(ii).forces;
     
 end
 
